@@ -26,12 +26,6 @@ html,body{
 /* Main content area background only */
 .main,
 .main-content,
-{
-  width:100%;
-  max-width: none;
-  margin:0;
-  background:white;
-}
 .dashboard,
 .content{
   background: #ffffff;
