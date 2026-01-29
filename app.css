@@ -23,6 +23,16 @@ html,body{
   height:100%;
   margin:0;
 }
+/* Main content area background only */
+.main,
+.main-content,
+.dashboard,
+.content{
+  background: #ffffff;
+}
+.content{
+  padding: 20px;
+}
 
 body{
   font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Open Sans','Helvetica Neue',sans-serif;
@@ -30,17 +40,23 @@ body{
   background:var(--bg);
 }
 
+/* Top header bar */
 .topbar{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  background:var(--bg);
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-  z-index:30;
+  background: #6a0f1a;          /* TAMIU maroon */
+  color: #ffffff;
+  border-bottom: 1px solid #540c14;
 }
+
+.topbar .brand,
+.topbar button,
+.topbar .status{
+  color: #ffffff;
+}
+
+.topbar button{
+  border: 1px solid rgba(255,255,255,.35);
+}
+
 
 .brand{font-weight:700;}
 
