@@ -1,14 +1,20 @@
 :root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#f1f5f9;
-  --muted:#94a3b8;
-  --primary:#7c3aed;
-  --primary-600:#6d28d9;
-  --border:#334155;
-  --danger:#ef4444;
-  --ok:#22c55e;
-  --warn:#f59e0b;
+  /* TAMIU-inspired palette (maroon + warm neutrals) */
+  --bg: #0b0b0d;              /* deep near-black */
+  --card: #141417;            /* charcoal card */
+  --card-2: #1b1b20;          /* slightly lighter */
+  --text: #f5f5f7;            /* off-white */
+  --muted: #c7c7cf;           /* light gray text */
+  --border: #2a2a33;          /* subtle border */
+
+  --primary: #6a0f1a;         /* maroon */
+  --primary-600: #540c14;     /* deeper maroon */
+  --primary-100: #f3e7e9;     /* soft maroon tint (light backgrounds) */
+
+  --accent: #d6b26e;          /* muted “gold” accent (optional) */
+  --ok: #1f9d55;
+  --warn: #c98a1a;
+  --danger: #b42318;
 }
 
 *{box-sizing:border-box;}
@@ -197,9 +203,12 @@ p{
   cursor:pointer;
 }
 
-.btn-primary{
-  background:var(--primary);
-  color:#fff;
+.btn-primary,
+.nav a.active,
+.sidebar .active{
+  background: var(--primary);
+  border-color: var(--primary-600);
+  color: var(--text);
 }
 
 .btn-primary:hover{background:var(--primary-600);}
@@ -213,6 +222,20 @@ p{
 .btn-outline:hover{
   background:var(--bg);
   color:#fff;
+}
+/* Links */
+a{ color: var(--primary-100); }
+a:hover{ color: var(--accent); }
+
+/* Card accents */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.card--maroon{
+  border: 1px solid rgba(106, 15, 26, .55);
 }
 
 .row{
